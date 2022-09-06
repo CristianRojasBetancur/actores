@@ -1,0 +1,21 @@
+<h1>Nuevo actor</h1>
+
+<%= form_for @actor do |form|%>
+  <%= form.label "Name"%><br>
+  <%= form.text_field :name %><br><br>
+  <%= form.label "Biography"%><br>
+  <%= form.text_field :bio %><br><br>
+  <%= form.label "Birthday date"%><br>
+  <%= form.date_field :birth_date %><br><br>
+  <%= form.label "Born place"%><br>
+  <%= form.text_field :birth_place %><br><br>
+  <%= form.label "Imagen URL"%><br>
+  <%= form.text_field :image_url %><br><br>
+  <%= form.label "Is alive?"%><br>
+  <%= form.select :alive, [["Yes", true], ["No", false]] %><br><br>
+  <%= form.label "Death date (if is death)"%><br>
+  <%= form.date_field :death_date %><br><br>
+  <%= form.label "Death place (if is death)"%><br>
+  <%= form.text_field :death_place %><br><br>
+  <%= form.submit %>
+<% end %>
